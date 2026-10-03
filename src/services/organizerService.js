@@ -1,5 +1,4 @@
-import { query, withTransaction } from '../lib/db.js';
-import { hashPassword, verifyPassword, verifyAgainstDummy } from '../lib/passwords.js';
+import { hashPassword, verifyPassword, verifyAgainstDummy } from '../lib/password.js';
 import { httpError } from '../lib/http.js';
 import db from '../lib/db.js';
 

@@ -18,7 +18,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const config = {
   env: process.env.NODE_ENV ?? 'development',
   isProd,
-  port: Number(optional('PORT', 4000)),
+  port: Number(optional('PORT', 3000)),
 
   db: {
     url: required('DATABASE_URL'),
@@ -35,7 +35,7 @@ const config = {
   },
 
   cors: {
-    origins: optional('CLIENT_ORIGIN', 'http://localhost:5173')
+    origins: optional('CLIENT_ORIGIN', 'http://localhost:5174', 'http://localhost:3000')
       .split(',')
       .map((s) => s.trim())
       .filter(Boolean),
